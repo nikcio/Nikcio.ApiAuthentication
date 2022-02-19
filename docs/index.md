@@ -11,6 +11,20 @@ public void ConfigureServices(IServiceCollection services) {
 
 This will add all the setup for adding JWT authentication.
 
+Make sure to add the settings you'd like to use to your appsettings.json:
+
+```json
+"Nikcio": {
+    "ApiAuthentication": {
+
+        "ValidIssuer": "localhost",
+        "ValidAudience": "localhost"
+    }
+}
+```
+
+**Note** All avalible settings can be found in the [ApiAuthenticationSettings.cs](src\Nikcio.ApiAuthentication\Settings\Models\ApiAuthenticationSettings.cs)
+
 Now you just need to create a way to make Api keys (Or create one in the database) and a controller to get a token with a api key.
 
 Example:
