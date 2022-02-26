@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Nikcio.ApiAuthentication.ApiKeys.Services;
 using Nikcio.ApiAuthentication.Authentication.Services;
 using Nikcio.ApiAuthentication.Persistence.ApiKeys.Models;

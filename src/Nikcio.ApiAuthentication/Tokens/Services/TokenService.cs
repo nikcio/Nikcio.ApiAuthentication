@@ -6,18 +6,27 @@ using Nikcio.ApiAuthentication.Tokens.Generators;
 using Nikcio.ApiAuthentication.Tokens.Models;
 
 namespace Nikcio.ApiAuthentication.Tokens.Services {
+    /// <inheritdoc/>
     public class TokenService : ITokenService {
         private readonly ApiAuthenticationSettings _settings;
         private readonly ITokenGenerator _tokenGenerator;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="settings"></param>
+        /// <param name="tokenGenerator"></param>
         public TokenService(ApiAuthenticationSettings settings, ITokenGenerator tokenGenerator) {
             _tokenGenerator = tokenGenerator;
             _settings = settings;
         }
 
+        /// <inheritdoc/>
         public ApiToken GenerateToken() {
             return GenerateToken(null);
         }
+
+        /// <inheritdoc/>
         public ApiToken GenerateToken(List<Claim> claims) {
             TimeSpan refreshTokenExpriesin = TimeSpan.FromMinutes(_settings.RefreshTokenExpirationMinutes);
             var refreshTokenExpriesOn = DateTime.UtcNow.Add(refreshTokenExpriesin);

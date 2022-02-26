@@ -7,16 +7,24 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Nikcio.ApiAuthentication.Tokens.Generators {
+    /// <inheritdoc/>
     public class TokenGenerator : ITokenGenerator {
         private readonly ILogger<TokenGenerator> _logger;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="logger"></param>
         public TokenGenerator(ILogger<TokenGenerator> logger) {
             _logger = logger;
         }
+
+        /// <inheritdoc/>
         public string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim> claims) {
             return Generate(secretKey, expiresOn, issuer, audience, claims, SecurityAlgorithms.HmacSha256);
         }
 
+        /// <inheritdoc/>
         public string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim> claims, string algorithm = SecurityAlgorithms.HmacSha256) {
             if (string.IsNullOrWhiteSpace(issuer)) {
                 _logger.LogWarning("Issuer not set on token");
