@@ -18,7 +18,7 @@ namespace Nikcio.ApiAuthentication.Settings.Extentions {
             }).AddJwtBearer(options => {
                 options.RequireHttpsMetadata = bindJwtSettings.RequireHttpsMetadata;
                 options.SaveToken = bindJwtSettings.SaveToken;
-                options.TokenValidationParameters = new TokenValidationParameters() {
+                options.TokenValidationParameters = new TokenValidationParameters {
                     ValidateIssuerSigningKey = bindJwtSettings.ValidateIssuerSigningKey,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(bindJwtSettings.AccessTokenSecret)),
                     ValidateIssuer = bindJwtSettings.ValidateIssuer,

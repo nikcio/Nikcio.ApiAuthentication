@@ -19,12 +19,10 @@ namespace TestProject.Controllers {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
         private readonly IApiKeyAuthenticatorService _apiKeyAuthenticatorService;
         private readonly IApiKeyService _apiKeyService;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IApiKeyAuthenticatorService apiKeyAuthenticatorService, IApiKeyService apiKeyService) {
-            _logger = logger;
+        public WeatherForecastController(IApiKeyAuthenticatorService apiKeyAuthenticatorService, IApiKeyService apiKeyService) {
             _apiKeyAuthenticatorService = apiKeyAuthenticatorService;
             _apiKeyService = apiKeyService;
         }

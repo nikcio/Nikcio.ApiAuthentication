@@ -13,6 +13,9 @@ namespace Nikcio.ApiAuthentication.Tokens.Generators {
         public TokenGenerator(ILogger<TokenGenerator> logger) {
             _logger = logger;
         }
+        public string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim> claims) {
+            return Generate(secretKey, expiresOn, issuer, audience, claims, SecurityAlgorithms.HmacSha256);
+        }
 
         public string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim> claims, string algorithm = SecurityAlgorithms.HmacSha256) {
             if (string.IsNullOrWhiteSpace(issuer)) {

@@ -4,6 +4,8 @@ using System.Security.Claims;
 
 namespace Nikcio.ApiAuthentication.Tokens.Generators {
     public interface ITokenGenerator {
-        string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim> claims, string algorithm = "HS256");
+        string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim> claims);
+
+        string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim> claims, string algorithm);
     }
 }
