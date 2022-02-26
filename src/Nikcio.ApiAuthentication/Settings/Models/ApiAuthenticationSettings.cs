@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Nikcio.ApiAuthentication.Settings.Models {
+﻿namespace Nikcio.ApiAuthentication.Settings.Models {
     /// <summary>
     /// The api authentication settings available
     /// </summary>

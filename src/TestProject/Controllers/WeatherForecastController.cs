@@ -4,10 +4,6 @@ using Nikcio.ApiAuthentication.ApiKeys.Services;
 using Nikcio.ApiAuthentication.Authentication.Services;
 using Nikcio.ApiAuthentication.Persistence.ApiKeys.Models;
 using Nikcio.ApiAuthentication.Tokens.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace TestProject.Controllers {
     [ApiController]

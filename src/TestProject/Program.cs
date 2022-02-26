@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
-
 namespace TestProject {
     public class Program {
         public static void Main(string[] args) {

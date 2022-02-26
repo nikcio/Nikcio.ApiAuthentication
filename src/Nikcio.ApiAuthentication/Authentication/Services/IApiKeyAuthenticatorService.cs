@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Nikcio.ApiAuthentication.Tokens.Models;
+﻿using Nikcio.ApiAuthentication.Tokens.Models;
 
 namespace Nikcio.ApiAuthentication.Authentication.Services {
     /// <summary>

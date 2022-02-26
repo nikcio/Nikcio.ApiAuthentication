@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 
 namespace Nikcio.ApiAuthentication.Tokens.Generators {
     /// <summary>
@@ -16,7 +14,7 @@ namespace Nikcio.ApiAuthentication.Tokens.Generators {
         /// <param name="audience"></param>
         /// <param name="claims"></param>
         /// <returns></returns>
-        string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim> claims);
+        string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim?>? claims);
         /// <summary>
         /// Generates a api token
         /// </summary>
@@ -27,6 +25,6 @@ namespace Nikcio.ApiAuthentication.Tokens.Generators {
         /// <param name="claims"></param>
         /// <param name="algorithm"></param>
         /// <returns></returns>
-        string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim> claims, string algorithm);
+        string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim?>? claims, string algorithm);
     }
 }

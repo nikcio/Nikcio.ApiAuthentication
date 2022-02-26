@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using Nikcio.ApiAuthentication.Tokens.Models;
 
 namespace Nikcio.ApiAuthentication.Tokens.Services {
@@ -18,6 +17,6 @@ namespace Nikcio.ApiAuthentication.Tokens.Services {
         /// </summary>
         /// <param name="claims"></param>
         /// <returns></returns>
-        ApiToken GenerateToken(List<Claim> claims);
+        ApiToken GenerateToken(List<Claim?>? claims);
     }
 }

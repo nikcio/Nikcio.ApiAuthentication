@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Nikcio.ApiAuthentication.ApiKeys.Services;
+﻿using Nikcio.ApiAuthentication.ApiKeys.Services;
 using Nikcio.ApiAuthentication.Tokens.Models;
 using Nikcio.ApiAuthentication.Tokens.Services;
 using Microsoft.Extensions.Logging;
@@ -29,16 +26,16 @@ namespace Nikcio.ApiAuthentication.Authentication.Services {
         /// <inheritdoc/>
         public async Task<ApiToken> AuthenticateKey(string apikey) {
             try {
-                var apiKeyEntry = (await _apiKeyService.QueryDbSet()).ReponseValue.Include(item => item.Claims).Where(item => item.Key == apikey).FirstOrDefault();
+                var apiKeyEntry = (await _apiKeyService.QueryDbSet()).ReponseValue?.Include(item => item.Claims).Where(item => item.Key == apikey).FirstOrDefault();
                 var apiKeyExists = apiKeyEntry != default;
                 if (apiKeyExists) {
-                    return _tokenService.GenerateToken(apiKeyEntry.GetClaims());
+                    return _tokenService.GenerateToken(apiKeyEntry?.GetClaims());
                 } else {
-                    return null;
+                    return new ApiToken();
                 }
             } catch (Exception ex) {
                 _logger.LogError(ex, $"Authentication failed for key: {apikey}");
-                return null;
+                return new ApiToken();
             }
         }
     }

@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 
 namespace Nikcio.ApiAuthentication.Extentions.Models {
     /// <summary>
@@ -9,7 +8,7 @@ namespace Nikcio.ApiAuthentication.Extentions.Models {
         /// <summary>
         /// Provides programmatic configuration used by <see cref="IAuthorizationService"/> and <see cref="IAuthorizationPolicyProvider"/>
         /// </summary>
-        public Action<AuthorizationOptions> AuthorizationOptions { get; set; } = default;
+        public Action<AuthorizationOptions>? AuthorizationOptions { get; set; } = default;
         /// <summary>
         /// Configures what connection string to use to store data
         /// </summary>

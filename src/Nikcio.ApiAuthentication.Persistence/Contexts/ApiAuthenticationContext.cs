@@ -23,11 +23,11 @@ namespace Nikcio.ApiAuthentication.Persistence.Contexts {
         /// <summary>
         /// Api keys
         /// </summary>
-        public DbSet<ApiKey> ApiKeys { get; set; }
+        public DbSet<ApiKey>? ApiKeys { get; set; }
         /// <summary>
         /// Api claims
         /// </summary>
-        public DbSet<ApiClaim> ApiClaims { get; set; }
+        public DbSet<ApiClaim>? ApiClaims { get; set; }
 
         /// <summary>
         /// 

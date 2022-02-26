@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using Nikcio.ApiAuthentication.Settings.Models;
 using Nikcio.ApiAuthentication.Tokens.Generators;
 using Nikcio.ApiAuthentication.Tokens.Models;
@@ -27,7 +25,7 @@ namespace Nikcio.ApiAuthentication.Tokens.Services {
         }
 
         /// <inheritdoc/>
-        public ApiToken GenerateToken(List<Claim> claims) {
+        public ApiToken GenerateToken(List<Claim?>? claims) {
             TimeSpan refreshTokenExpriesin = TimeSpan.FromMinutes(_settings.RefreshTokenExpirationMinutes);
             var refreshTokenExpriesOn = DateTime.UtcNow.Add(refreshTokenExpriesin);
             TimeSpan tokenExpriesIn = TimeSpan.FromMinutes(_settings.AccessTokenExpirationMinutes);

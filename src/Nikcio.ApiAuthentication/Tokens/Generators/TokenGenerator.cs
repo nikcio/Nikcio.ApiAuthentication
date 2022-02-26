@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Logging;
@@ -20,12 +18,12 @@ namespace Nikcio.ApiAuthentication.Tokens.Generators {
         }
 
         /// <inheritdoc/>
-        public string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim> claims) {
+        public string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim?>? claims) {
             return Generate(secretKey, expiresOn, issuer, audience, claims, SecurityAlgorithms.HmacSha256);
         }
 
         /// <inheritdoc/>
-        public string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim> claims, string algorithm) {
+        public string Generate(string secretKey, DateTime expiresOn, string issuer, string audience, List<Claim?>? claims, string algorithm) {
             if (string.IsNullOrWhiteSpace(issuer)) {
                 _logger.LogWarning("Issuer not set on token");
             }

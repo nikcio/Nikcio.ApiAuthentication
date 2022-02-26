@@ -1,5 +1,4 @@
-﻿using System;
-using System.IdentityModel.Tokens.Jwt;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Nikcio.ApiAuthentication.Settings.Models;
 using Microsoft.IdentityModel.Tokens;
