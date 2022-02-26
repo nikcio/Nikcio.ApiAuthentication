@@ -8,11 +8,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Nikcio.ApiAuthentication.Extentions {
     public static class ApiAuthenticationExtentions {
-        public static IServiceCollection AddNikcioApiAuthentication(this IServiceCollection services, IConfiguration configuration, Action<AuthorizationOptions> authorizationOptions = default, string connectionStringKey = "Default", string configurationSection = "Nikcio:ApiAuthentication") {
+        public static IServiceCollection AddNikcioApiAuthentication(this IServiceCollection services, IConfiguration configuration, Action<AuthorizationOptions> authorizationOptions = default, string connectionStringKey = "Default", string configurationSection = "Nikcio:ApiAuthentication", string dataAccessConfigurationSection = "Nikcio:DataAccess") {
             services
                 .AddSettings(configuration, configurationSection)
                 .AddTokens()
-                .AddPersistence(configuration, connectionStringKey)
+                .AddPersistence(configuration, connectionStringKey, dataAccessConfigurationSection)
                 .AddApiAuthenticationServices();
 
             if (authorizationOptions == default) {
