@@ -16,10 +16,10 @@ namespace Nikcio.ApiAuthentication.Extentions.Models {
         /// <summary>
         /// The configuration section for Nikcio.ApiAuthentication
         /// </summary>
-        public string ConfigurationSection { get; set; } = "Nikcio.ApiAuthentication";
+        public string ConfigurationSection { get; set; } = "Nikcio:ApiAuthentication";
         /// <summary>
         /// The configuration section for Nikcio.DataAccess
         /// </summary>
-        public string DataAccessConfigurationSection { get; set; } = "Nikcio.DataAccess";
+        public string DataAccessConfigurationSection { get; set; } = "Nikcio:DataAccess";
     }
 }
