@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.14" />
   </ItemGroup>
 
@@ -18,5 +25,10 @@
 	<!-- Generate XML documentation -->
 	<PropertyGroup>
 		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+		<Description>Easy to setup authentication for Asp Net Core</Description>
+		<PackageProjectUrl>https://github.com/nikcio/Nikcio.ApiAuthentication</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/nikcio/Nikcio.ApiAuthentication</RepositoryUrl>
+		<PackageTags>jwt</PackageTags>
 	</PropertyGroup>
 </Project>
