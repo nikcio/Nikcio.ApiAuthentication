@@ -5,6 +5,7 @@ using Nikcio.ApiAuthentication.ApiKeys.Services;
 using Nikcio.ApiAuthentication.Tokens.Models;
 using Nikcio.ApiAuthentication.Tokens.Services;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 
 namespace Nikcio.ApiAuthentication.Authentication.Services {
     /// <inheritdoc/>
@@ -28,7 +29,7 @@ namespace Nikcio.ApiAuthentication.Authentication.Services {
         /// <inheritdoc/>
         public async Task<ApiToken> AuthenticateKey(string apikey) {
             try {
-                var apiKeyEntry = (await _apiKeyService.QueryDbSet()).ReponseValue.Where(item => item.Key == apikey).FirstOrDefault();
+                var apiKeyEntry = (await _apiKeyService.QueryDbSet()).ReponseValue.Include(item => item.Claims).Where(item => item.Key == apikey).FirstOrDefault();
                 var apiKeyExists = apiKeyEntry != default;
                 if (apiKeyExists) {
                     return _tokenService.GenerateToken(apiKeyEntry.GetClaims());
