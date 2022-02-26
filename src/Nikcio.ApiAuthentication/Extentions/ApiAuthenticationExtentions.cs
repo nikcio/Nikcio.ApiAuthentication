@@ -5,6 +5,7 @@ using Nikcio.ApiAuthentication.Tokens.Extentions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Nikcio.DataAccess.Settings;
 
 namespace Nikcio.ApiAuthentication.Extentions {
     public static class ApiAuthenticationExtentions {
