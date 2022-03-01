@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/nikcio/Nikcio.ApiAuthentication/compare/v2.0.1...v2.0.2) (2022-03-01)
+
+
+### Bug Fixes
+
+* Fixed typos ([2a557bb](https://github.com/nikcio/Nikcio.ApiAuthentication/commit/2a557bbb2142c5542d058b9aa3ec4964d653b860))
+
 ### [2.0.1](https://github.com/nikcio/Nikcio.ApiAuthentication/compare/v2.0.0...v2.0.1) (2022-02-26)
 
 
