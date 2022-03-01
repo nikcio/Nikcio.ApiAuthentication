@@ -5,11 +5,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Nikcio.ApiAuthentication.Settings.Extentions {
+namespace Nikcio.ApiAuthentication.Settings.Extensions {
     /// <summary>
-    /// Extentions
+    /// Extensions
     /// </summary>
-    public static class SettingsExtentions {
+    public static class SettingsExtensions {
         /// <summary>
         /// Adds settings
         /// </summary>

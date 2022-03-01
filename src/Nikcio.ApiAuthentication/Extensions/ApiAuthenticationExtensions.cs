@@ -1,15 +1,15 @@
-﻿using Nikcio.ApiAuthentication.Persistence.Extentions;
-using Nikcio.ApiAuthentication.Settings.Extentions;
-using Nikcio.ApiAuthentication.Tokens.Extentions;
+﻿using Nikcio.ApiAuthentication.Persistence.Extensions;
+using Nikcio.ApiAuthentication.Settings.Extensions;
+using Nikcio.ApiAuthentication.Tokens.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Nikcio.ApiAuthentication.Extentions.Models;
+using Nikcio.ApiAuthentication.Extensions.Models;
 
-namespace Nikcio.ApiAuthentication.Extentions {
+namespace Nikcio.ApiAuthentication.Extensions {
     /// <summary>
-    /// Extentions
+    /// Extensions
     /// </summary>
-    public static class ApiAuthenticationExtentions {
+    public static class ApiAuthenticationExtensions {
         /// <summary>
         /// Adds Nikcio.ApiAuthentication
         /// </summary>

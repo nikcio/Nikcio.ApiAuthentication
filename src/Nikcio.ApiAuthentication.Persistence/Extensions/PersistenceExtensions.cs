@@ -1,15 +1,15 @@
-﻿using Nikcio.ApiAuthentication.Persistence.ApiClaims.Extentions;
-using Nikcio.ApiAuthentication.Persistence.ApiKeys.Extentions;
-using Nikcio.ApiAuthentication.Persistence.Contexts.Extentions;
+﻿using Nikcio.ApiAuthentication.Persistence.ApiClaims.Extensions;
+using Nikcio.ApiAuthentication.Persistence.ApiKeys.Extensions;
+using Nikcio.ApiAuthentication.Persistence.Contexts.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Nikcio.DataAccess.Extentions;
+using Nikcio.DataAccess.Extensions;
 
-namespace Nikcio.ApiAuthentication.Persistence.Extentions {
+namespace Nikcio.ApiAuthentication.Persistence.Extensions {
     /// <summary>
-    /// Persistence extentions
+    /// Persistence Extensions
     /// </summary>
-    public static class PersistenceExtentions {
+    public static class PersistenceExtensions {
         /// <summary>
         /// Adds persistence services and settings
         /// </summary>

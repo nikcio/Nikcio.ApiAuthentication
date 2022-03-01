@@ -1,16 +1,16 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Nikcio.ApiAuthentication.Authentication.Extentions {
+namespace Nikcio.ApiAuthentication.ApiClaims.Extensions {
     /// <summary>
-    /// Extentions
+    /// Extensions
     /// </summary>
-    public static class AuthenticationExtentions {
+    public static class ApiClaimExtensions {
         /// <summary>
-        /// Adds authentication services
+        /// Adds api claims
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddAuthenticationServices(this IServiceCollection services) {
+        public static IServiceCollection AddApiClaims(this IServiceCollection services) {
             services
                 .AddServices();
 

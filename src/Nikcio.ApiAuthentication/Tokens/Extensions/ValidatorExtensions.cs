@@ -1,11 +1,11 @@
 ﻿using Nikcio.ApiAuthentication.Tokens.Validators;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Nikcio.ApiAuthentication.Tokens.Extentions {
+namespace Nikcio.ApiAuthentication.Tokens.Extensions {
     /// <summary>
-    /// Extentions
+    /// Extensions
     /// </summary>
-    public static class ValidatorExtentions {
+    public static class ValidatorExtensions {
         /// <summary>
         /// Adds validators
         /// </summary>

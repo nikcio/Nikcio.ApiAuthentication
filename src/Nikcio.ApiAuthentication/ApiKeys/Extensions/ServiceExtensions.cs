@@ -1,11 +1,11 @@
-﻿using Nikcio.ApiAuthentication.Authentication.Services;
+﻿using Nikcio.ApiAuthentication.ApiKeys.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Nikcio.ApiAuthentication.Authentication.Extentions {
+namespace Nikcio.ApiAuthentication.ApiKeys.Extensions {
     /// <summary>
-    /// Extentions
+    /// Extensions
     /// </summary>
-    public static class ServiceExtentions {
+    public static class ServiceExtensions {
         /// <summary>
         /// Adds services
         /// </summary>
@@ -13,7 +13,7 @@ namespace Nikcio.ApiAuthentication.Authentication.Extentions {
         /// <returns></returns>
         public static IServiceCollection AddServices(this IServiceCollection services) {
             services
-                .AddScoped<IApiKeyAuthenticatorService, ApiKeyAuthenticatorService>();
+                .AddScoped<IApiKeyService, ApiKeyService>();
 
             return services;
         }

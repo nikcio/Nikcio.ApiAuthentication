@@ -1,11 +1,11 @@
 ﻿using Nikcio.ApiAuthentication.Persistence.ApiKeys.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Nikcio.ApiAuthentication.Persistence.ApiKeys.Extentions {
+namespace Nikcio.ApiAuthentication.Persistence.ApiKeys.Extensions {
     /// <summary>
-    /// Repository extentions
+    /// Repository Extensions
     /// </summary>
-    public static class RepositoryExtentions {
+    public static class RepositoryExtensions {
         /// <summary>
         /// Adds repositories
         /// </summary>

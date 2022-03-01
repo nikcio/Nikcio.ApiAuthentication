@@ -1,13 +1,13 @@
-﻿using Nikcio.ApiAuthentication.ApiClaims.Extentions;
-using Nikcio.ApiAuthentication.ApiKeys.Extentions;
-using Nikcio.ApiAuthentication.Authentication.Extentions;
+﻿using Nikcio.ApiAuthentication.ApiClaims.Extensions;
+using Nikcio.ApiAuthentication.ApiKeys.Extensions;
+using Nikcio.ApiAuthentication.Authentication.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Nikcio.ApiAuthentication.Extentions {
+namespace Nikcio.ApiAuthentication.Extensions {
     /// <summary>
-    /// Extentions
+    /// Extensions
     /// </summary>
-    public static class ApiAuthenticationServicesExtentions {
+    public static class ApiAuthenticationServicesExtensions {
         /// <summary>
         /// Adds api authentication services
         /// </summary>

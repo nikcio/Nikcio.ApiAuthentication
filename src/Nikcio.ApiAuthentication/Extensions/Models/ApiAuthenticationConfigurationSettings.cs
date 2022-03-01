@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 
-namespace Nikcio.ApiAuthentication.Extentions.Models {
+namespace Nikcio.ApiAuthentication.Extensions.Models {
     /// <summary>
     /// Settings for api configuration
     /// </summary>

@@ -1,11 +1,11 @@
 ﻿using Nikcio.ApiAuthentication.Tokens.Generators;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Nikcio.ApiAuthentication.Tokens.Extentions {
+namespace Nikcio.ApiAuthentication.Tokens.Extensions {
     /// <summary>
-    /// Extentions
+    /// Extensions
     /// </summary>
-    public static class GeneratorExtentions {
+    public static class GeneratorExtensions {
         /// <summary>
         /// Adds generators
         /// </summary>

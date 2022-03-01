@@ -1,5 +1,5 @@
 using Microsoft.OpenApi.Models;
-using Nikcio.ApiAuthentication.Extentions;
+using Nikcio.ApiAuthentication.Extensions;
 
 namespace TestProject {
     public class Startup {

@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Nikcio.ApiAuthentication.Persistence.ApiClaims.Extentions {
+namespace Nikcio.ApiAuthentication.Persistence.ApiClaims.Extensions {
     /// <summary>
-    /// Extentions for api claims
+    /// Extensions for api claims
     /// </summary>
-    public static class ApiClaimExtentions {
+    public static class ApiClaimExtensions {
         /// <summary>
         /// Adds api claims
         /// </summary>

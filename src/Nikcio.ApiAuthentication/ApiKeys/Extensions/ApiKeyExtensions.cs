@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Nikcio.ApiAuthentication.Persistence.ApiKeys.Extentions {
+namespace Nikcio.ApiAuthentication.ApiKeys.Extensions {
     /// <summary>
-    /// Api key extentions
+    /// Extensions
     /// </summary>
-    public static class ApiKeyExtentions {
+    public static class ApiKeyExtensions {
         /// <summary>
         /// Adds api keys
         /// </summary>
@@ -12,7 +12,7 @@ namespace Nikcio.ApiAuthentication.Persistence.ApiKeys.Extentions {
         /// <returns></returns>
         public static IServiceCollection AddApiKeys(this IServiceCollection services) {
             services
-                .AddRespositories();
+                .AddServices();
 
             return services;
         }

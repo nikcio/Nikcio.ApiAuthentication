@@ -2,11 +2,11 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Nikcio.ApiAuthentication.Persistence.Contexts.Extentions {
+namespace Nikcio.ApiAuthentication.Persistence.Contexts.Extensions {
     /// <summary>
-    /// Context extentions
+    /// Context Extensions
     /// </summary>
-    public static class ContextExtentions {
+    public static class ContextExtensions {
         /// <summary>
         /// Adds contexts
         /// </summary>

@@ -1,11 +1,11 @@
 ﻿using Nikcio.ApiAuthentication.ApiClaims.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Nikcio.ApiAuthentication.ApiClaims.Extentions {
+namespace Nikcio.ApiAuthentication.ApiClaims.Extensions {
     /// <summary>
-    /// Extentions
+    /// Extensions
     /// </summary>
-    public static class ServiceExtentions {
+    public static class ServiceExtensions {
         /// <summary>
         /// Adds services
         /// </summary>
