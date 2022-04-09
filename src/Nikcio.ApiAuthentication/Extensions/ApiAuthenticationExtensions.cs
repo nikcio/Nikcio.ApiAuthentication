@@ -4,6 +4,12 @@ using Nikcio.ApiAuthentication.Tokens.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Nikcio.ApiAuthentication.Extensions.Models;
+using Microsoft.AspNetCore.Builder;
+using Nikcio.ApiAuthentication.Settings.Models;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System.Security.Principal;
 
 namespace Nikcio.ApiAuthentication.Extensions {
     /// <summary>
@@ -44,6 +50,44 @@ namespace Nikcio.ApiAuthentication.Extensions {
             }
 
             return services;
+        }
+
+        /// <summary>
+        /// Adds console logs to help debug Jwt errors
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="bindJwtSettings"></param>
+        /// <returns></returns>
+        public static IApplicationBuilder UseJwtDebug(this IApplicationBuilder app, ApiAuthenticationSettings bindJwtSettings) {
+            app.Use(async (context, next) => {
+                try {
+                    if (context != null && context.User != null && context.User.Identity != null) {
+                        Console.WriteLine(context.User.Identity.Name);
+                        Console.WriteLine(context.User.Identity.IsAuthenticated);
+                        var authToken = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", string.Empty);
+                        var tokenHandler = new JwtSecurityTokenHandler();
+                        var validationParameters = new TokenValidationParameters() {
+                            ValidateIssuerSigningKey = bindJwtSettings.ValidateAccessTokenSecretKey,
+                            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(bindJwtSettings.AccessTokenSecret)),
+                            ValidateIssuer = bindJwtSettings.ValidateIssuer,
+                            ValidIssuer = bindJwtSettings.ValidIssuer,
+                            ValidateAudience = bindJwtSettings.ValidateAudience,
+                            ValidAudience = bindJwtSettings.ValidAudience,
+                            RequireExpirationTime = bindJwtSettings.RequireExpirationTime,
+                            ValidateLifetime = bindJwtSettings.RequireExpirationTime,
+                            ClockSkew = TimeSpan.Zero
+                        }; ;
+
+                        IPrincipal principal = tokenHandler.ValidateToken(authToken, validationParameters, out SecurityToken validatedToken);
+                        Console.WriteLine("Success: " + validatedToken);
+                    }
+                } catch (Exception ex) {
+                    Console.WriteLine(ex.Message);
+                }
+                await next();
+            });
+
+            return app;
         }
     }
 }
