@@ -19,7 +19,7 @@ namespace Nikcio.ApiAuthentication.Persistence.Contexts.Extensions {
                 options.UseSqlServer(configuration.GetConnectionString(connectionStringKey))
                 .UseLazyLoadingProxies());
 
-            services.AddScoped<IApiAuthenticationContext>(x => {
+            services.AddTransient<IApiAuthenticationContext>(x => {
                 var factory = x.GetRequiredService<IDbContextFactory<ApiAuthenticationContext>>();
                 return factory.CreateDbContext();
             });
