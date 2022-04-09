@@ -34,7 +34,7 @@ namespace Nikcio.ApiAuthentication.Authentication.Services {
                     return new ApiToken();
                 }
             } catch (Exception ex) {
-                _logger.LogError(ex, $"Authentication failed for key: {apikey}");
+                _logger.LogError(ex, "Authentication failed for key: {Apikey}", apikey);
                 return new ApiToken();
             }
         }
