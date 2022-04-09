@@ -17,8 +17,7 @@ namespace Nikcio.ApiAuthentication.Persistence.Contexts.Extensions {
         public static IServiceCollection AddContexts(this IServiceCollection services, IConfiguration configuration, string connectionStringKey) {
             services.AddPooledDbContextFactory<ApiAuthenticationContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString(connectionStringKey))
-                .UseLazyLoadingProxies()
-                .LogTo(Console.WriteLine));
+                .UseLazyLoadingProxies());
 
             services.AddScoped<IApiAuthenticationContext>(x => {
                 var factory = x.GetRequiredService<IDbContextFactory<ApiAuthenticationContext>>();
