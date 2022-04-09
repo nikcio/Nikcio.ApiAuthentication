@@ -26,7 +26,7 @@ namespace Nikcio.ApiAuthentication.Authentication.Services {
         /// <inheritdoc/>
         public async Task<ApiToken> AuthenticateKey(string apikey) {
             try {
-                var apiKeyEntry = (await _apiKeyService.QueryDbSet()).ReponseValue?.Include(item => item.Claims).Where(item => item.Key == apikey).FirstOrDefault();
+                var apiKeyEntry = (await _apiKeyService.QueryDbSet()).ResponseValue?.Include(item => item.Claims).Where(item => item.Key == apikey).FirstOrDefault();
                 var apiKeyExists = apiKeyEntry != default;
                 if (apiKeyExists) {
                     return _tokenService.GenerateToken(apiKeyEntry?.GetClaims());

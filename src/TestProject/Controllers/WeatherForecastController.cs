@@ -35,7 +35,7 @@ namespace TestProject.Controllers {
 
         [HttpGet]
         public async Task<ApiKey> AddAPiKey(string apiKey) {
-            return (await _apiKeyService.Add(new ApiKey { Key = apiKey })).ReponseValue;
+            return (await _apiKeyService.Add(new ApiKey { Key = apiKey })).ResponseValue;
         }
 
         [HttpGet]
