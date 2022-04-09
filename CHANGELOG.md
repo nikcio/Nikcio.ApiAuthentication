@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/nikcio/Nikcio.ApiAuthentication/compare/v2.0.2...v2.1.0) (2022-04-09)
+
+
+### Features
+
+* Added UseJwtDebug to help debug Jwt authentication ([90c2398](https://github.com/nikcio/Nikcio.ApiAuthentication/commit/90c2398f651661816ac8c34465ff51b0f0ba7ae3))
+
+
+### Bug Fixes
+
+* Fixed context lifetime ([49a7db2](https://github.com/nikcio/Nikcio.ApiAuthentication/commit/49a7db28ed72231b5975732509f74b381a950749))
+* Removed debug logging ([15d1807](https://github.com/nikcio/Nikcio.ApiAuthentication/commit/15d18076a9e601f6cd42fddc788dbb2cb474ca1c))
+
 ### [2.0.2](https://github.com/nikcio/Nikcio.ApiAuthentication/compare/v2.0.1...v2.0.2) (2022-03-01)
 
 
