@@ -1,7 +1,7 @@
-﻿using Nikcio.ApiAuthentication.ApiClaims.Extensions;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Nikcio.ApiAuthentication.ApiClaims.Extensions;
 using Nikcio.ApiAuthentication.ApiKeys.Extensions;
 using Nikcio.ApiAuthentication.Authentication.Extensions;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Nikcio.ApiAuthentication.Extensions {
     /// <summary>

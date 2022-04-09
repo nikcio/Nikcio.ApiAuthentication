@@ -1,7 +1,7 @@
-﻿using Nikcio.ApiAuthentication.Persistence.ApiKeys.Models;
+﻿using Microsoft.Extensions.Logging;
+using Nikcio.ApiAuthentication.Persistence.ApiKeys.Models;
 using Nikcio.ApiAuthentication.Persistence.Contexts;
 using Nikcio.DataAccess.Repositories.Crud;
-using Microsoft.Extensions.Logging;
 
 namespace Nikcio.ApiAuthentication.Persistence.ApiKeys.Repositories {
     /// <summary>

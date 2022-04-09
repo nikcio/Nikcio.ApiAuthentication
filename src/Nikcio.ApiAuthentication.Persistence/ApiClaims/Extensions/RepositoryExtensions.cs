@@ -1,5 +1,5 @@
-﻿using Nikcio.ApiAuthentication.Persistence.ApiClaims.Repositories;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Nikcio.ApiAuthentication.Persistence.ApiClaims.Repositories;
 
 namespace Nikcio.ApiAuthentication.Persistence.ApiClaims.Extensions {
     /// <summary>

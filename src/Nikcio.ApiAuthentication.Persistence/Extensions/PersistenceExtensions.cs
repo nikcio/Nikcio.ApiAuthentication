@@ -1,8 +1,8 @@
-﻿using Nikcio.ApiAuthentication.Persistence.ApiClaims.Extensions;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Nikcio.ApiAuthentication.Persistence.ApiClaims.Extensions;
 using Nikcio.ApiAuthentication.Persistence.ApiKeys.Extensions;
 using Nikcio.ApiAuthentication.Persistence.Contexts.Extensions;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Nikcio.DataAccess.Extensions;
 
 namespace Nikcio.ApiAuthentication.Persistence.Extensions {

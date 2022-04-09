@@ -1,15 +1,15 @@
-﻿using Nikcio.ApiAuthentication.Persistence.Extensions;
-using Nikcio.ApiAuthentication.Settings.Extensions;
-using Nikcio.ApiAuthentication.Tokens.Extensions;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Principal;
+using System.Text;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Nikcio.ApiAuthentication.Extensions.Models;
-using Microsoft.AspNetCore.Builder;
-using Nikcio.ApiAuthentication.Settings.Models;
-using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using System.Security.Principal;
+using Nikcio.ApiAuthentication.Extensions.Models;
+using Nikcio.ApiAuthentication.Persistence.Extensions;
+using Nikcio.ApiAuthentication.Settings.Extensions;
+using Nikcio.ApiAuthentication.Settings.Models;
+using Nikcio.ApiAuthentication.Tokens.Extensions;
 
 namespace Nikcio.ApiAuthentication.Extensions {
     /// <summary>

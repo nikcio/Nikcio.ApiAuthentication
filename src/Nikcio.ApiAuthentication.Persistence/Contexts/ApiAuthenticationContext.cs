@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 using Nikcio.ApiAuthentication.Persistence.ApiClaims.Models;
 using Nikcio.ApiAuthentication.Persistence.ApiKeys.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace Nikcio.ApiAuthentication.Persistence.Contexts {
     /// <summary>

@@ -1,7 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using Nikcio.ApiAuthentication.Settings.Models;
 using Microsoft.IdentityModel.Tokens;
+using Nikcio.ApiAuthentication.Settings.Models;
 
 namespace Nikcio.ApiAuthentication.Tokens.Validators {
     /// <inheritdoc/>

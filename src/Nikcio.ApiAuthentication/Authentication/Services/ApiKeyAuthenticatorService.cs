@@ -1,8 +1,8 @@
-﻿using Nikcio.ApiAuthentication.ApiKeys.Services;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Nikcio.ApiAuthentication.ApiKeys.Services;
 using Nikcio.ApiAuthentication.Tokens.Models;
 using Nikcio.ApiAuthentication.Tokens.Services;
-using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore;
 
 namespace Nikcio.ApiAuthentication.Authentication.Services {
     /// <inheritdoc/>

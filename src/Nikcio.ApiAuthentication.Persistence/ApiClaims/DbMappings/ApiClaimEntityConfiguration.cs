@@ -1,7 +1,7 @@
-﻿using Nikcio.ApiAuthentication.Persistence.ApiClaims.Models;
-using Nikcio.DataAccess.Conventions;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Nikcio.ApiAuthentication.Persistence.ApiClaims.Models;
+using Nikcio.DataAccess.Conventions;
 
 namespace Nikcio.ApiAuthentication.Persistence.ApiClaims.DbMappings {
     /// <summary>

@@ -1,5 +1,5 @@
-﻿using Nikcio.ApiAuthentication.Tokens.Generators;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Nikcio.ApiAuthentication.Tokens.Generators;
 
 namespace Nikcio.ApiAuthentication.Tokens.Extensions {
     /// <summary>

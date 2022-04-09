@@ -1,9 +1,9 @@
 ﻿using System.Text;
-using Nikcio.ApiAuthentication.Settings.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Nikcio.ApiAuthentication.Settings.Models;
 
 namespace Nikcio.ApiAuthentication.Settings.Extensions {
     /// <summary>
